@@ -14,10 +14,6 @@ function fetchMeetupByID(meetupID) {
   });
 }
 
-function onInputClick(el) {
-  alert('onInputClick');
-}
-
 const MainComponent = defineComponent({
   data() {
     return {
