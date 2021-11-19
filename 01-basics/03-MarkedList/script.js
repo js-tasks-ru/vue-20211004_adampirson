@@ -29,7 +29,6 @@ const emails = [
   'Isaias_Kuhic@jarrett.net',
 ];
 
-// Требуется создать Vue приложение
 const MainComponent = defineComponent({
   data() {
     return {

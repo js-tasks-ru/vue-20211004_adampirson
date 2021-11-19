@@ -6,17 +6,18 @@
   </head>
   <body>
     <div id="app">
-      <div>
-        <label><input type="radio" value="1" /> 1</label>
-        <label><input type="radio" value="2" /> 2</label>
-        <label><input type="radio" value="3" /> 3</label>
-        <label><input type="radio" value="4" /> 4</label>
-        <label><input type="radio" value="5" /> 5</label>
+        <span v-for="n in 5">
+          <input type="radio" name="meetupSelect" :value="n" v-model="meetupID">
+          <label>{{ n }}</label>
+        </span>
 
         <hr />
 
-        <h3>MEETUP_TITLE</h3>
-      </div>
+        <h3>
+          <div v-if="meetupData !== null">
+            {{ meetupData.title }}
+          </div>
+        </h3>
     </div>
 
     <script type="module" src="script.js"></script>
