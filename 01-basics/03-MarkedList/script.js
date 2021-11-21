@@ -32,15 +32,11 @@ const emails = [
 const MainComponent = defineComponent({
   data() {
     return {
-      emailSearchString: null,
+      emailSearchString: '',
     };
   },
   computed: {
     emailsFiltered() {
-      if (!emails) {
-        return null;
-      }
-
       return emails.map((email) => {
         return {
           email,

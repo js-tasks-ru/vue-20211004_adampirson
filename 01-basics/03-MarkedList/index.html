@@ -18,7 +18,7 @@
         </div>
         <ul>
           <li v-for="item in emailsFiltered"
-              :class="item.hasMatch ? 'marked' : null">
+              :class="{ marked: item.hasMatch }">
             {{ item.email }}
           </li>
         </ul>
