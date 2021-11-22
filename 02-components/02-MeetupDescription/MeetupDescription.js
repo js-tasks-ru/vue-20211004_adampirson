@@ -2,6 +2,21 @@ import { defineComponent } from './vendor/vue.esm-browser.js';
 
 export default defineComponent({
   name: 'MeetupDescription',
-
-  template: `<p class="meetup-description">Описание должно быть здесь</p>`,
+  props: {
+    description: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      meetupDescription: this.description,
+    };
+  },
+  watch: {
+    description(newDescription) {
+      this.meetupDescription = newDescription;
+    },
+  },
+  template: `<p class="meetup-description">{{ meetupDescription }}</p>`,
 });
