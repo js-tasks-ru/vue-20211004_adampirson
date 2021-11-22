@@ -8,15 +8,5 @@ export default defineComponent({
       default: '',
     },
   },
-  data() {
-    return {
-      meetupDescription: this.description,
-    };
-  },
-  watch: {
-    description(newDescription) {
-      this.meetupDescription = newDescription;
-    },
-  },
-  template: `<p class="meetup-description">{{ meetupDescription }}</p>`,
+  template: `<p class="meetup-description">{{ description }}</p>`,
 });
